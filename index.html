@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMII One Page Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Video Background hanya di bagian Home -->
+    <header id="home" class="video-section">
+      <video autoplay muted loop id="bg-video">
+        <source src="saveinsta.cc_1080p-tiap-sudut-tmii-sudahbedacerita-buat-semua-orang.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+      </video>
+      <div class="overlay">
+        <h1>Selamat Datang di Website</h1>
+        <p class="subtitle">Kelompok V</p>
+      </div>
+    </header>
+
+    <!-- Navbar (pure CSS hamburger menu) -->
+    <nav class="navbar">
+        <div class="logo" href="">TMII</div>
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <ul class="menu">
+            <li><a href="#anggota">Anggota</a></li>
+            <li><a href="#materi">Materi</a></li>
+            <li><a href="#tmii">Tentang</a></li>
+            <li><a href="#lkpd">LKPD</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#tentang">TMII</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <button id="mode-toggle">🌙</button>
+    </nav>
+
+    <!-- Sections -->
+    <section id="anggota" class="section team-section">
+    <h2 class="team-h2">Anggota Kelompok</h2>
+    <div class="team-grid">
+        <div class="team-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Anggota 1">
+            <h3>Joshua Benjamin Rompis</h3>
+            <p>Pembuat Website, Makalah</p>
+        </div>
+        <div class="team-card">
+            <img src="WhatsApp Image 2025-06-01 at 19.04.20_06db24d6.jpg" alt="Anggota 2">
+            <h3>Jason Ivander</h3>
+            <p>Pembuat makalah, Design</p>
+        </div>
+        <div class="team-card">
+            <img src="WhatsApp Image 2025-06-01 at 19.03.06_5bf2301b.jpg" alt="Anggota 3">
+            <h3>Firdaus Ramdan</h3>
+            <p>Pembuat makalah, Penggagas ide</p>
+        </div>
+        <div class="team-card">
+            <img src="" alt="Anggota 4">
+            <h3>Haikal Rezqi</h3>
+            <p>Pembuat makalah, Dokumentasi</p>
+        </div>
+    </div>
+</section>
+    <section id="materi" class="section materi-section">
+  <h2>Materi Pembelajaran</h2>
+  <div class="materi-grid materi-grid-3-2">
+    <div class="materi-card">
+      <h3>Pengertian TMII</h3>
+      <p>Taman Mini Indonesia Indah (TMII) adalah taman wisata bertema budaya Indonesia di Jakarta Timur yang menampilkan keberagaman budaya Indonesia.</p>
+    </div>
+    <div class="materi-card">
+      <h3>Sejarah TMII</h3>
+      <p>TMII dibangun pada tahun 1972 dan diresmikan pada tahun 1975 sebagai miniatur kekayaan budaya Nusantara.</p>
+    </div>
+    <div class="materi-card">
+      <h3>Wahana & Fasilitas</h3>
+      <p>Berbagai wahana seperti anjungan daerah, museum, taman, dan teater IMAX Keong Mas tersedia di TMII.</p>
+    </div>
+    <div class="materi-card">
+      <h3>Nilai Edukasi</h3>
+      <p>TMII menjadi sarana edukasi dan rekreasi yang memperkenalkan budaya, adat, dan teknologi Indonesia kepada masyarakat.</p>
+    </div>
+    <div class="materi-card">
+      <h3>Refleksi</h3>
+      <p>Melalui kunjungan dan pembelajaran di TMII, kita dapat lebih memahami pentingnya pelestarian budaya dan keberagaman Indonesia.</p>
+    </div>
+    <div class="materi-card">
+      <h3>Informasi</h3>
+      <p>TMII buka setiap hari dengan berbagai acara budaya dan fasilitas yang dapat dinikmati oleh semua kalangan pengunjung.</p>
+    </div>
+  </div>
+  
+</section>
+    <section id="tmii" class="section">Tentang</section>
+    <section id="lkpd" class="section grid-section">LKPD Section</section>
+    <section id="galeri" class="section grid-section">Galeri Section</section>
+    <section id="tentang" class="section">TMII</section>
+    <section id="kontak" class="section">Kontak Section</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
