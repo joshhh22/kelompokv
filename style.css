@@ -196,11 +196,11 @@ body.dark-mode .section { background: #323232; }
     justify-items: center;
 }
 .team-card {
-    background: #fff;
+    background: linear-gradient(135deg, #fffbe7 85%, #f1c40f1a 100%);
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(50,50,50,0.08);
     padding: 32px 20px 24px 20px;
-    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s, background 0.3s;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -229,9 +229,9 @@ body.dark-mode .section { background: #323232; }
     margin-bottom: 0;
 }
 .team-card:hover {
-    transform: translateY(-12px) scale(1.04);
-    box-shadow: 0 12px 32px rgba(50,50,50,0.16);
-    background: #f1c40f;
+    background: linear-gradient(135deg, #fff176 60%, #f1c40f 100%);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(50,50,50,0.14);
 }
 .team-card:hover img {
     border-color: #333;
@@ -265,7 +265,7 @@ body.dark-mode .section { background: #323232; }
     margin: 0 auto;
 }
 .materi-card {
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #fffbe7 60%, #f1c40f1a 100%);
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(50,50,50,0.08);
     padding: 32px 24px 28px 24px;
@@ -283,6 +283,7 @@ body.dark-mode .section { background: #323232; }
     color: #2b2b2b;
     margin-bottom: 12px;
     font-weight: 700;
+    border-bottom: 2px solid #f1c40f;
 }
 .materi-card p {
     color: #666;
@@ -290,9 +291,9 @@ body.dark-mode .section { background: #323232; }
     line-height: 1.6;
 }
 .materi-card:hover {
+    background: linear-gradient(135deg, #fff176 60%, #f1c40f 100%);
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 12px 32px rgba(50,50,50,0.14);
-    background: #f1c40f;
 }
 .materi-card:hover h3,
 .materi-card:hover p {
@@ -321,6 +322,99 @@ body.dark-mode .section { background: #323232; }
     }
     .materi-grid-3-2 .materi-card {
         grid-column: auto !important;
+    }
+}
+
+/* Tentang section */
+.tentang-section {
+    background: #fffbe7;
+    text-align: center;
+    padding: 100px 20px;
+}
+.tentang-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+.tentang-card {
+    background: linear-gradient(135deg, #fffbe7 85%, #f1c40f1a 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(50,50,50,0.08);
+    padding: 32px 24px 28px 24px;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s, background 0.25s;
+    text-align: left;
+    width: 100%;
+    max-width: 340px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Refleksi di tengah */
+.tentang-card:nth-child(3) {
+    grid-column: 2 / 3;
+}
+
+@media (max-width: 900px) {
+    .tentang-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .tentang-card {
+        max-width: 100%;
+        padding: 24px 12px 20px 12px;
+    }
+    .tentang-card:nth-child(3) {
+        grid-column: auto;
+    }
+}
+.tentang-card h3 {
+    font-size: 1.25rem;
+    color: #f1c40f;
+    margin-bottom: 12px;
+    font-weight: 700;
+    border-bottom: 2px solid #f1c40f;
+}
+
+/* Tentang Website card lebih besar */
+.tentang-card:first-child {
+    grid-column: span 2;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 900px) {
+    .tentang-card:first-child {
+        grid-column: auto;
+        max-width: 100%;
+    }
+}
+.tentang-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.tentang-card:hover {
+    background: linear-gradient(135deg, #fff176 85%, #f1c40f 100%);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(50,50,50,0.14);
+}
+.tentang-card:hover h3,
+.tentang-card:hover p {
+    color: #222;
+}
+@media (max-width: 700px) {
+    .tentang-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .tentang-card {
+        max-width: 100%;
+        padding: 24px 12px 20px 12px;
     }
 }
 
@@ -368,4 +462,14 @@ body.dark-mode h2{
         max-width: 100%;
         padding: 24px 12px 20px 12px;
     }
+}
+
+/* Tentang desc */
+.tentang-desc {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.7;
+    text-align: center;
 }
