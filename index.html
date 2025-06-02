@@ -7,34 +7,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Video Background hanya di bagian Home -->
-    <header id="home" class="video-section">
+     <!-- Opening Overlay -->
+     <div id="opening-overlay">
+      <div class="opening-content">
+          <h1>Welcome to</h1>
+          <p>Taman Mini Indonesia Indah Web Project</p>
+      </div>
+  </div>
+
+  <!-- Video Background hanya di bagian Home -->
+  <header id="home" class="video-section">
       <video autoplay muted loop id="bg-video">
-        <source src="saveinsta.cc_1080p-tiap-sudut-tmii-sudahbedacerita-buat-semua-orang.mp4" type="video/mp4">
-        Browser Anda tidak mendukung video.
+          <source src="saveinsta.cc_1080p-tiap-sudut-tmii-sudahbedacerita-buat-semua-orang.mp4" type="video/mp4">
+          Browser Anda tidak mendukung video.
       </video>
       <div class="overlay">
-        <h1>Selamat Datang di Website</h1>
-        <p class="subtitle">Kelompok V</p>
+          <h1>Selamat Datang di Website</h1>
+          <p class="subtitle">Kelompok V</p>
       </div>
-    </header>
+  </header>
 
-    <!-- Navbar (pure CSS hamburger menu) -->
-    <nav class="navbar">
-        <div class="logo" href="">TMII</div>
-        <input type="checkbox" id="menu-toggle" style="display: none;">
-        <label for="menu-toggle" class="menu-icon">☰</label>
-        <ul class="menu">
-            <li><a href="#anggota">Anggota</a></li>
-            <li><a href="#materi">Materi</a></li>
-            <li><a href="#tmii">Tentang</a></li>
-            <li><a href="#lkpd">LKPD</a></li>
-            <li><a href="#galeri">Galeri</a></li>
-            <li><a href="#tentang">TMII </a></li>
-            <li><a href="#kontak">Kontak</a></li>
-        </ul>
-        <button id="mode-toggle">🌙</button>
-    </nav>
+  <!-- Navbar (pure CSS hamburger menu) -->
+  <nav class="navbar">
+      <div class="logo" href="">TMII</div>
+      <input type="checkbox" id="menu-toggle" style="display: none;">
+      <label for="menu-toggle" class="menu-icon">☰</label>
+      <ul class="menu">
+          <li><a href="#anggota">Anggota</a></li>
+          <li><a href="#materi">Materi</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#lkpd">LKPD</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+      </ul>
+  </nav>
 
     <!-- Sections -->
     <section id="anggota" class="section team-section">
@@ -112,10 +118,142 @@
     </div>
   </div>
 </section>
-    <section id="lkpd" class="section grid-section">LKPD Section</section>
-    <section id="galeri" class="section grid-section">Galeri Section</section>
-    <section id="tentang" class="section">TMII</section>
-    <section id="kontak" class="section">Kontak Section</section>
+<section id="lkpd" class="section lkpd-section">
+  <h2>LKPD</h2>
+  <div class="lkpd-grid">
+    <a href="lkpd1.docx" class="lkpd-card" download>LKPD 1</a>
+    <a href="lkpd2.docx" class="lkpd-card" download>LKPD 2</a>
+    <a href="lkpd3.docx" class="lkpd-card" download>LKPD 3</a>
+    <a href="lkpd4.docx" class="lkpd-card" download>LKPD 4</a>
+  </div>
+  <h3>Mata Pelajaran</h3>
+  <div class="subject-grid">
+    <div class="subject-card">
+      <h4>Rekayasa Perangkat Lunak</h4>
+      <p>Belajar tentang pengembangan perangkat lunak dan teknologi.</p>
+    </div>
+    <div class="subject-card">
+      <h4>Informatika</h4>
+      <p>Memahami dasar-dasar ilmu komputer dan teknologi informasi.</p>
+    </div>
+    <div class="subject-card">
+      <h4>Muatan Lokal</h4>
+      <p>Mengenal budaya dan kearifan lokal Indonesia.</p>
+    </div>
+  </div>
+</section>
+<section id="galeri" class="section galeri-section">
+  <h2>Galeri</h2>
+
+  <!-- Museum Pemadam Grid -->
+  <div class="grid-container" id="museum-pemadam">
+    <h3>Museum Pemadam</h3>
+    <div class="grid-items">
+      <div class="grid-item">
+        <img src="museum-pemadam1.jpg" alt="Museum Pemadam 1" class="grid-image">
+        <p>Museum Pemadam 1</p>
+      </div>
+      <div class="grid-item">
+        <img src="museum-pemadam2.jpg" alt="Museum Pemadam 2" class="grid-image">
+        <p>Museum Pemadam 2</p>
+      </div>
+      <div class="grid-item">
+        <img src="museum-pemadam3.jpg" alt="Museum Pemadam 3" class="grid-image">
+        <p>Museum Pemadam 3</p>
+      </div>
+      <div class="grid-item">
+        <img src="museum-pemadam4.jpg" alt="Museum Pemadam 4" class="grid-image">
+        <p>Museum Pemadam 4</p>
+      </div>
+    </div>
+    <div class="pagination-controls">
+      <button class="pagination-btn prev-btn" data-target="museum-pemadam">❮ Previous</button>
+      <button class="pagination-btn next-btn" data-target="museum-pemadam">Next ❯</button>
+    </div>
+  </div>
+
+  <!-- Anjungan Kalsel Grid -->
+  <div class="grid-container" id="anjungan-kalsel">
+    <h3>Anjungan Kalsel</h3>
+    <div class="grid-items">
+      <div class="grid-item">
+        <img src="anjungan-kalsel1.jpg" alt="Anjungan Kalsel 1" class="grid-image">
+        <p>Anjungan Kalsel 1</p>
+      </div>
+      <div class="grid-item">
+        <img src="anjungan-kalsel2.jpg" alt="Anjungan Kalsel 2" class="grid-image">
+        <p>Anjungan Kalsel 2</p>
+      </div>
+      <div class="grid-item">
+        <img src="anjungan-kalsel3.jpg" alt="Anjungan Kalsel 3" class="grid-image">
+        <p>Anjungan Kalsel 3</p>
+      </div>
+      <div class="grid-item">
+        <img src="anjungan-kalsel4.jpg" alt="Anjungan Kalsel 4" class="grid-image">
+        <p>Anjungan Kalsel 4</p>
+      </div>
+    </div>
+    <div class="pagination-controls">
+      <button class="pagination-btn prev-btn" data-target="anjungan-kalsel">❮ Previous</button>
+      <button class="pagination-btn next-btn" data-target="anjungan-kalsel">Next ❯</button>
+    </div>
+  </div>
+
+  <!-- Anjungan Kaltim Grid -->
+  <div class="grid-container" id="anjungan-kaltim">
+    <h3>Anjungan Kaltim</h3>
+    <div class="grid-items">
+      <div class="grid-item">
+        <img src="anjungan-kaltim1.jpg" alt="Anjungan Kaltim 1" class="grid-image">
+        <p>Anjungan Kaltim 1</p>
+      </div>
+      <div class="grid-item">
+        <img src="anjungan-kaltim2.jpg" alt="Anjungan Kaltim 2" class="grid-image">
+        <p>Anjungan Kaltim 2</p>
+      </div>
+      <div class="grid-item">
+        <img src="anjungan-kaltim3.jpg" alt="Anjungan Kaltim 3" class="grid-image">
+        <p>Anjungan Kaltim 3</p>
+      </div>
+      <div class="grid-item">
+        <img src="anjungan-kaltim4.jpg" alt="Anjungan Kaltim 4" class="grid-image">
+        <p>Anjungan Kaltim 4</p>
+      </div>
+    </div>
+    <div class="pagination-controls">
+      <button class="pagination-btn prev-btn" data-target="anjungan-kaltim">❮ Previous</button>
+      <button class="pagination-btn next-btn" data-target="anjungan-kaltim">Next ❯</button>
+    </div>
+  </div>
+</section>
+<section id="kontak" class="section kontak-section">
+  <h2 style="color: white;">Kontak</h2>
+  <div class="kontak-container">
+    <form class="kontak-form">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+      
+      <label for="message">Saran dan Masukan:</label>
+      <textarea id="message" name="message" placeholder="Tulis saran atau masukan Anda" rows="5" required></textarea>
+      
+      <button type="submit" class="submit-btn">Kirim</button>
+    </form>
+    <div class="maps-container">
+      <h3 style=" color: white;">Lokasi Kami</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.680928279529!2d106.853209829217!3d-6.2388249999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e6c6b5b4c7%3A0x8f8e4c8c8c8c8c8c!2sSMKN%208%20Jakarta!5e0!3m2!1sen!2sid!4v1634567890123!5m2!1sen!2sid" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
 
     <script src="script.js"></script>
 </body>

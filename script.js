@@ -32,3 +32,56 @@ const video = document.getElementById('bg-video');
 video.addEventListener('error', function(e) {
     console.error('Video failed to load:', e);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("opening-overlay");
+    overlay.addEventListener("animationend", () => {
+        overlay.style.display = "none";
+    });
+});
+
+const itemsPerPage = 4;
+
+function setupPagination(gridId) {
+  const gridContainer = document.getElementById(gridId);
+  const gridItems = gridContainer.querySelectorAll('.grid-item');
+  const prevBtn = gridContainer.querySelector('.prev-btn');
+  const nextBtn = gridContainer.querySelector('.next-btn');
+
+  let currentPage = 1;
+  const totalPages = Math.ceil(gridItems.length / itemsPerPage);
+
+  function updateGrid() {
+    gridItems.forEach((item, index) => {
+      if (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      updateGrid();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      updateGrid();
+    }
+  });
+
+  updateGrid();
+}
+
+// Initialize pagination for each grid
+setupPagination('museum-pemadam');
+setupPagination('anjungan-kalsel');
+setupPagination('anjungan-kaltim');
