@@ -47,6 +47,143 @@ body {
 /* Hide scrollbar */
 body::-webkit-scrollbar { display: none; }
 
+/* General Section Styling */
+body {
+    margin: 0; font-family: Arial, sans-serif; background: #fafafa; color: #222;
+  }
+  .section {
+    padding: 60px 20px;
+  }
+  .section-alt {
+    background: #222;
+    color: white;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  
+  /* Containers */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Grid Helpers */
+  .grid-3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .grid-4 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Team Members */
+  .team-member {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    color: #222;
+  }
+  .team-member img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 18px;
+  }
+  .team-member h3 {
+    margin: 0 0 8px;
+  }
+  .team-member p {
+    color: #555;
+    margin: 0;
+  }
+  
+  /* Services */
+  .service {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    flex: 1 1 30%;
+    min-width: 260px;
+    color: #222;
+    text-align: center;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .service:hover {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+  }
+  
+  /* Portfolio Items */
+  .portfolio-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 280px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    color: #222;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .portfolio-item img {
+    width: 100%;
+    display: block;
+  }
+  .portfolio-item h4 {
+    margin: 15px 0 20px;
+  }
+  .portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+  
+  /* Gallery Items */
+  .gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 280px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.4s ease;
+  }
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Animation Base */
+  .animate-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: transform, opacity;
+  }
+  
+  .animate-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
 /*Beige (#ffffff), light grey (#d4d4d4)    grey(#b3b3b3) black-grey (#2b2b2b)*/
 
 /* Navbar styling */
@@ -275,6 +412,14 @@ body.dark-mode .section { background: #323232; }
     color: #222;
 }
 
+/* CSS to resize the image */
+.small-image {
+    max-width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for elegance */
+}
+
 /* Materi section */
 .materi-section {
     background: #fff;
@@ -358,6 +503,188 @@ body.dark-mode .section { background: #323232; }
         grid-column: auto !important;
     }
 }
+
+.mulok-grid-section {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    border-radius: 12px;
+    margin-top: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .section-description {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .mulok-grid-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    /* smooth transition for children */
+    transition: transform 0.3s ease;
+  }
+  
+  .mulok-grid-table > div {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+    cursor: default;
+  }
+  
+  /* Hover effect: zoom & shadow + subtle gradient background */
+  .mulok-grid-table > div:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.2);
+    background: linear-gradient(135deg, #fff176 60%, #f1c40f 100%);
+    color: #0d1b2a;
+    cursor: pointer;
+  }
+  
+  /* Header cells with gradient */
+  .grid-header {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #f1c40f;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    user-select: none;
+    cursor: default;
+    box-shadow: 0 2px 8px rgb(102 126 234 / 0.5);
+    transition: background 0.3s ease;
+  }
+  
+  /* Title cells with lighter gradient */
+  .grid-title {
+    background: linear-gradient(90deg, #89f7fe, #66a6ff);
+    font-weight: 700;
+    user-select: none;
+    cursor: default;
+    box-shadow: 0 2px 8px rgb(102 166 255 / 0.4);
+    transition: background 0.3s ease;
+  }
+  
+  /* Responsive: on smaller screens make grid 1 column */
+  @media (max-width: 768px) {
+    .mulok-grid-table {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  #pelajaran-sejarah {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Container atas: dua kolom */
+  .container-atas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .history-item.atas {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .history-item.atas .text, 
+  .history-item.atas .image {
+    flex: 1 1 45%;
+    min-width: 280px;
+  }
+
+  .history-item.atas .image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+
+  /* Container bawah: full width */
+  .container-bawah {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .history-item.bawah {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .history-item.bawah .text {
+    flex: 1 1 450px;
+    min-width: 320px;
+    padding-right: 20px;
+  }
+
+  .history-item.bawah .image img {
+    flex: 1 1 450px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Responsive */
+  @media(max-width: 900px) {
+    .container-atas {
+      grid-template-columns: 1fr;
+    }
+    .history-item.atas {
+      flex-direction: column;
+    }
+    .history-item.atas .text,
+    .history-item.atas .image {
+      flex: 1 1 100%;
+      padding: 0;
+      min-width: auto;
+    }
+
+    .container-bawah {
+      padding: 20px 10px;
+    }
+    .history-item.bawah {
+      flex-direction: column;
+    }
+    .history-item.bawah .text,
+    .history-item.bawah .image img {
+      max-width: 100%;
+      flex: 1 1 100%;
+      padding: 0;
+    }
+  }
+  
+  
+  
 
 /* Tentang section */
 .tentang-section {

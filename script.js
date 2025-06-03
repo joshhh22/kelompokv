@@ -8,24 +8,55 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Dark mode toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedElements = document.querySelectorAll('.animate-element');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animatedElements.forEach(el => observer.observe(el));
+});
+
+
 const modeToggle = document.getElementById('mode-toggle');
-modeToggle.addEventListener('click', function() {
+const currentMode = localStorage.getItem('theme');
+if (currentMode === 'dark') {
+    document.body.classList.add('dark-mode');
+    modeToggle.textContent = '☀️';
+}
+
+modeToggle.addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
     if (document.body.classList.contains('dark-mode')) {
         modeToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
     } else {
         modeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
     }
 });
 
-// Netflix-style intro animation
+
 window.addEventListener('load', function() {
-    const overlay = document.querySelector('.overlay');
-    overlay.style.opacity = 0;
-    overlay.style.transition = 'opacity 2s';
-    setTimeout(() => { overlay.style.opacity = 1; }, 100);
+  const overlay = document.querySelector('.overlay');
+  overlay.style.opacity = 1;
+  overlay.style.transition = 'opacity 2s ease';
+  setTimeout(() => {
+      overlay.style.opacity = 0;
+  }, 100); // Fade-out after 100ms
+  setTimeout(() => {
+      overlay.style.display = 'none';
+  }, 2100); // Remove from layout after transition
 });
+
+
 
 // Error handling for video
 const video = document.getElementById('bg-video');
@@ -85,3 +116,14 @@ function setupPagination(gridId) {
 setupPagination('museum-pemadam');
 setupPagination('anjungan-kalsel');
 setupPagination('anjungan-kaltim');
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('visible');
+    }
+  });
+}
+let options = { threshold: [0.2] };
+let observer = new IntersectionObserver(onEntry, options);
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
