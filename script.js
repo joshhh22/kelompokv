@@ -8,6 +8,10 @@ window.addEventListener('scroll', function() {
     }
 });
 
+document.getElementById("scrollToTop").addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const animatedElements = document.querySelectorAll('.animate-element');
 
@@ -127,3 +131,25 @@ function onEntry(entry) {
 let options = { threshold: [0.2] };
 let observer = new IntersectionObserver(onEntry, options);
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
+
+AOS.init({
+  duration: 1000, // durasi animasi dalam ms
+  once: true      // animasi hanya sekali saat scroll
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".slider");
+
+  sliders.forEach((slider) => {
+    const images = slider.querySelectorAll(".slider-image");
+    let currentIndex = 0;
+
+    setInterval(() => {
+      images[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add("active");
+    }, 3000); // Change image every 3 seconds
+  });
+});

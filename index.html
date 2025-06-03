@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website edukatif tentang Taman Mini Indonesia Indah (TMII) oleh Kelompok V.">
     <title>TMII One Page Website</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
      <!-- Opening Overlay -->
@@ -29,7 +31,7 @@
 
   <!-- Navbar (pure CSS hamburger menu) -->
   <nav class="navbar">
-      <div class="logo" href="">TMII</div>
+      <div class="logo" href="" id="scrollToTop">TMII</div>
       <input type="checkbox" id="menu-toggle" style="display: none;">
       <label for="menu-toggle" class="menu-icon">☰</label>
       <ul class="menu">
@@ -126,67 +128,68 @@
     </div>
     <h3 class="animate-element">Mata Pelajaran</h3>
     <div class="subject-grid animate-element">
-        <div class="subject-card animate-element">
-            <h4 class="animate-element">Rekayasa Perangkat Lunak</h4>
-            <p class="animate-element">>
-              Saya membuat website ini dengan HTML, CSS, dan JavaScript dalam bentuk one-page website. Saya banyak mengambil inspirasi dari berbagai website seperti Netflix, Pinterest, dan lainnya, serta sedikit bantuan AI. Selain itu, saya juga menerapkan banyak animasi dan kombinasi gaya CSS agar tampilan lebih menarik dan interaktif.</p>
-        </div>
-        <div class="subject-card animate-element">
-            <h4 class="animate-element">Informatika</h4>
-            <p class="animate-element">Website ini saya hosting menggunakan layanan gratis dari Vercel dan GitHub. Kodenya saya upload ke GitHub, lalu dihubungkan ke Vercel untuk proses deployment otomatis. Vercel menyediakan domain gratis dan memudahkan update hanya dengan melakukan push ke repositori GitHub. Cara singkatnya: buat akun GitHub & Vercel, upload project ke GitHub, lalu sambungkan repositori tersebut ke Vercel untuk langsung online.</p>
-        </div>
-        <section id="mulok-perbandingan" class="mulok-grid-section">
-          <h2 class="animate-element">Perbandingan Budaya Daerah</h2>
-          <p class="section-description animate-element">Berikut adalah perbandingan budaya antara Betawi, Kalimantan Timur, dan Kalimantan Selatan dari berbagai aspek:</p>
-        
-          <div class="mulok-grid-table animate-element">
-            <div class="grid-header animate-element">Aspek</div>
-            <div class="grid-header animate-element">Betawi</div>
-            <div class="grid-header animate-element">Kalimantan Timur</div>
-            <div class="grid-header animate-element">Kalimantan Selatan</div>
-        
-            <!-- Rumah Adat -->
-            <div class="grid-title animate-element">Rumah Adat</div>
-            <div class="animate-element">Rumah Kebaya – atap seperti pelana terlipat, dengan teras luas.</div>
-            <div class="animate-element" >Rumah Lamin – rumah panjang untuk banyak keluarga satu suku.</div>
-            <div class="animate-element">Rumah Banjar (Bubungan Tinggi) – atap tajam menjulang.</div>
-        
-            <!-- Pakaian Tradisional -->
-            <div class="grid-title animate-element">Pakaian Tradisional</div>
-            <div class="animate-element">Baju Sadariah & Kebaya Encim.</div>
-            <div class="animate-element">Rompi dan kain bermotif Dayak, dihiasi bulu burung.</div>
-            <div class="animate-element">Baamar Galung Pancar Matahari – warna cerah & emas.</div>
-        
-            <!-- Batik -->
-            <div class="grid-title animate-element">Batik</div>
-            <div class="animate-element">Motif Ondel-Ondel, Monas, dan kota Jakarta.</div>
-            <div class="animate-element">Motif alam, hewan, roh leluhur – warna kontras.</div>
-            <div class="animate-element">Sasirangan – motif ombak, tali air, warna cerah.</div>
-        
-            <!-- Alat Musik -->
-            <div class="grid-title animate-element">Alat Musik</div>
-            <div class="animate-element">Tanjidor dan Gambang Kromong.</div>
-            <div class="animate-element">Sape dan Jatung Utang.</div>
-            <div class="animate-element">Panting dan Gamelan Banjar.</div>
-        
-            <!-- Topeng -->
-            <div class="grid-title animate-element">Topeng</div>
-            <div class="animate-element">Tari Topeng Betawi – gambaran tokoh dan cerita rakyat.</div>
-            <div class="animate-element">Tari Topeng Betawi – gambaran tokoh dan cerita rakyat.</div>
-            <div class="animate-element">Topeng Hudoq – warna-warni, simbol roh leluhur.</div>        
-            <!-- Tarian dan Kesenian -->
-            <div class="grid-title" animate-element>Tarian & Kesenian</div>
-            <div class="animate-element">Tari Topeng, Tari Yapong, Lenong.</div>
-            <div class="animate-element">Tari Hudoq dan Tari Enggang.</div>
-            <div class="animate-element">Tari Baksa Kembang, Madihin.</div>
-        
-            <!-- Makanan -->
-            <div class="grid-title animate-element">Makanan Khas</div>
-            <div class="animate-element">Kerak Telor, Soto Betawi, Asinan.</div>
-            <div class="animate-element">Nasi Kuning, Ayam Cincane, Ikan Bakar.</div>
-            <div class="animate-element">Soto Banjar, Ketupat Kandangan, Bingka.</div>
-          </div>
-        </section>
+      <div class="subject-card animate-element">
+          <h4 class="animate-element">Rekayasa Perangkat Lunak</h4>
+          <p class="animate-element">
+            Saya membuat website ini dengan HTML, CSS, dan JavaScript dalam bentuk one-page website. Saya banyak mengambil inspirasi dari berbagai website seperti Netflix, Pinterest, dan lainnya, serta sedikit bantuan AI. Selain itu, saya juga menerapkan banyak animasi dan kombinasi gaya CSS agar tampilan lebih menarik dan interaktif.</p>
+      </div>
+      <div class="subject-card animate-element">
+          <h4 class="animate-element">Informatika</h4>
+          <p class="animate-element">Website ini saya hosting menggunakan layanan gratis dari Vercel dan GitHub. Kodenya saya upload ke GitHub, lalu dihubungkan ke Vercel untuk proses deployment otomatis. Vercel menyediakan domain gratis dan memudahkan update hanya dengan melakukan push ke repositori GitHub. Cara singkatnya: buat akun GitHub & Vercel, upload project ke GitHub, lalu sambungkan repositori tersebut ke Vercel untuk langsung online.</p>
+      </div>
+</div> <!-- Penutup div subject-grid -->
+<section id="mulok-perbandingan" class="mulok-grid-section">
+  <h2 class="animate-element">Perbandingan Budaya Daerah</h2>
+  <p class="section-description animate-element">Berikut adalah perbandingan budaya antara Betawi, Kalimantan Timur, dan Kalimantan Selatan dari berbagai aspek:</p>
+
+  <div class="mulok-grid-table animate-element">
+      <div class="grid-header animate-element">Aspek</div>
+      <div class="grid-header animate-element">Betawi</div>
+      <div class="grid-header animate-element">Kalimantan Timur</div>
+      <div class="grid-header animate-element">Kalimantan Selatan</div>
+
+      <!-- Rumah Adat -->
+      <div class="grid-title animate-element">Rumah Adat</div>
+      <div class="animate-element">Rumah Kebaya – atap seperti pelana terlipat, dengan teras luas.</div>
+      <div class="animate-element">Rumah Lamin – rumah panjang untuk banyak keluarga satu suku.</div>
+      <div class="animate-element">Rumah Banjar (Bubungan Tinggi) – atap tajam menjulang.</div>
+
+      <!-- Pakaian Tradisional -->
+      <div class="grid-title animate-element">Pakaian Tradisional</div>
+      <div class="animate-element">Baju Sadariah & Kebaya Encim.</div>
+      <div class="animate-element">Rompi dan kain bermotif Dayak, dihiasi bulu burung.</div>
+      <div class="animate-element">Baamar Galung Pancar Matahari – warna cerah & emas.</div>
+
+      <!-- Batik -->
+      <div class="grid-title animate-element">Batik</div>
+      <div class="animate-element">Motif Ondel-Ondel, Monas, dan kota Jakarta.</div>
+      <div class="animate-element">Motif alam, hewan, roh leluhur – warna kontras.</div>
+      <div class="animate-element">Sasirangan – motif ombak, tali air, warna cerah.</div>
+
+      <!-- Alat Musik -->
+      <div class="grid-title animate-element">Alat Musik</div>
+      <div class="animate-element">Tanjidor dan Gambang Kromong.</div>
+      <div class="animate-element">Sape dan Jatung Utang.</div>
+      <div class="animate-element">Panting dan Gamelan Banjar.</div>
+
+      <!-- Topeng -->
+      <div class="grid-title animate-element">Topeng</div>
+      <div class="animate-element">Tari Topeng Betawi – gambaran tokoh dan cerita rakyat.</div>
+      <div class="animate-element">Topeng Hudoq – warna-warni, simbol roh leluhur.</div>
+      <div class="animate-element">Topeng Baksa Kembang – tarian perayaan, warna cerah.</div>
+      <!-- Tarian dan Kesenian -->
+      <div class="grid-title animate-element">Tarian & Kesenian</div>
+      <div class="animate-element">Tari Topeng, Tari Yapong, Lenong.</div>
+      <div class="animate-element">Tari Hudoq dan Tari Enggang.</div>
+      <div class="animate-element">Tari Baksa Kembang, Madihin.</div>
+
+      <!-- Makanan -->
+      <div class="grid-title animate-element">Makanan Khas</div>
+      <div class="animate-element">Kerak Telor, Soto Betawi, Asinan.</div>
+      <div class="animate-element">Nasi Kuning, Ayam Cincane, Ikan Bakar.</div>
+      <div class="animate-element">Soto Banjar, Ketupat Kandangan, Bingka.</div>
+  </div>
+</section>
 
         <section id="pelajaran-sejarah" style="padding:40px 20px; background:#f9f9f9;">
           <h2 style="text-align:center; margin-bottom:40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
@@ -252,32 +255,46 @@
     </div>
 </section>
 <section id="galeri" class="section galeri-section">
-    <h2 class="animate-element">Galeri</h2>
-    <div class="grid-container animate-element" id="museum-pemadam">
-        <h3 class="animate-element">Museum Pemadam</h3>
-        <div class="grid-items animate-element">
-            <div class="grid-item animate-element">
-                <img src="museum-pemadam1.jpg" alt="Museum Pemadam 1" class="grid-image animate-element">
-                <p class="animate-element">Museum Pemadam 1</p>
-            </div>
-            <div class="grid-item animate-element">
-                <img src="museum-pemadam2.jpg" alt="Museum Pemadam 2" class="grid-image animate-element">
-                <p class="animate-element">Museum Pemadam 2</p>
-            </div>
-            <div class="grid-item animate-element">
-                <img src="museum-pemadam3.jpg" alt="Museum Pemadam 3" class="grid-image animate-element">
-                <p class="animate-element">Museum Pemadam 3</p>
-            </div>
-            <div class="grid-item animate-element">
-                <img src="museum-pemadam4.jpg" alt="Museum Pemadam 4" class="grid-image animate-element">
-                <p class="animate-element">Museum Pemadam 4</p>
-            </div>
-        </div>
-        <div class="pagination-controls animate-element">
-            <button class="pagination-btn prev-btn animate-element" data-target="museum-pemadam">❮ Previous</button>
-            <button class="pagination-btn next-btn animate-element" data-target="museum-pemadam">Next ❯</button>
-        </div>
-    </div>
+  <h2 class="animate-element">Galeri</h2>
+  <p class="galeri-desc animate-element">
+      Berikut adalah kumpulan foto yang menampilkan berbagai aktivitas dan fasilitas pemadam kebakaran di Kalimantan Selatan dan Kalimantan Timur.
+  </p>
+</section>
+
+<section id="galeri-pemadam-kalsel" class="section galeri-pemadam-section">
+  <h2 class="animate-element">Museum Pemadam</h2>
+  <div class="scroll-container animate-element">
+      <div class="scroll-content">
+          <img src="kalsel1.jpg" alt="Pemadam Kalsel 1" class="galeri-image">
+          <img src="kalsel2.jpg" alt="Pemadam Kalsel 2" class="galeri-image">
+          <img src="kalsel3.jpg" alt="Pemadam Kalsel 3" class="galeri-image">
+          <img src="kalsel4.jpg" alt="Pemadam Kalsel 4" class="galeri-image">
+      </div>
+  </div>
+</section>
+
+<section id="galeri-pemadam-kalsel" class="section galeri-pemadam-section">
+  <h2 class="animate-element">Anjungan Kalimantan selatan</h2>
+  <div class="scroll-container animate-element">
+      <div class="scroll-content">
+          <img src="kalsel1.jpg" alt="Pemadam Kalsel 1" class="galeri-image">
+          <img src="kalsel2.jpg" alt="Pemadam Kalsel 2" class="galeri-image">
+          <img src="kalsel3.jpg" alt="Pemadam Kalsel 3" class="galeri-image">
+          <img src="kalsel4.jpg" alt="Pemadam Kalsel 4" class="galeri-image">
+      </div>
+  </div>
+</section>
+
+<section id="galeri-pemadam-kaltim" class="section galeri-pemadam-section">
+  <h2 class="animate-element">Anjungan Kalimantan-timus</h2>
+  <div class="scroll-container animate-element">
+      <div class="scroll-content">
+          <img src="kaltim1.jpg" alt="Pemadam Kaltim 1" class="galeri-image">
+          <img src="kaltim2.jpg" alt="Pemadam Kaltim 2" class="galeri-image">
+          <img src="kaltim3.jpg" alt="Pemadam Kaltim 3" class="galeri-image">
+          <img src="kaltim4.jpg" alt="Pemadam Kaltim 4" class="galeri-image">
+      </div>
+  </div>
 </section>
 <section id="kontak" class="section kontak-section">
   <h2 style="color: white;">Kontak</h2>

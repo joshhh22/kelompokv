@@ -10,6 +10,15 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+
 /* Opening Overlay */
 #opening-overlay {
     position: fixed;
@@ -647,7 +656,7 @@ body.dark-mode .section { background: #323232; }
 
   .history-item.bawah .image img {
     flex: 1 1 450px;
-    max-width: 200px;
+    max-width: 280px;
     width: 100%;
     border-radius: 12px;
     object-fit: cover;
@@ -656,32 +665,46 @@ body.dark-mode .section { background: #323232; }
 
   /* Responsive */
   @media(max-width: 900px) {
-    .container-atas {
-      grid-template-columns: 1fr;
-    }
-    .history-item.atas {
-      flex-direction: column;
-    }
-    .history-item.atas .text,
-    .history-item.atas .image {
-      flex: 1 1 100%;
-      padding: 0;
-      min-width: auto;
-    }
-
-    .container-bawah {
-      padding: 20px 10px;
-    }
-    .history-item.bawah {
-      flex-direction: column;
-    }
-    .history-item.bawah .text,
-    .history-item.bawah .image img {
-      max-width: 100%;
-      flex: 1 1 100%;
-      padding: 0;
-    }
+  .container-atas {
+    grid-template-columns: 1fr;
   }
+
+  .history-item.atas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .history-item.atas .text,
+  .history-item.atas .image {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .container-bawah {
+    padding: 20px 10px;
+  }
+
+  .history-item.bawah {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .history-item.bawah .text {
+    padding: 0;
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .history-item.bawah .image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
   
   
   
@@ -923,69 +946,77 @@ body.dark-mode h2{
     color: #222;
 }
 
-/* Galeri Section */
-.galeri-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-}
-
-.galeri-section h2 {
+#galeri {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Mengatur tinggi section agar memenuhi viewport */
+    text-align: center; /* Memastikan teks berada di tengah */
+    background-color: #f9f9f9; /* Tambahkan warna latar belakang opsional */
+  }
+  
+  #galeri h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
-}
-
-.grid-container {
-    margin-bottom: 40px;
-}
-
-.grid-container h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  #galeri .galeri-desc {
+    font-size: 1.2rem;
     color: #555;
+    max-width: 600px; /* Membatasi lebar teks agar tetap rapi */
+  }
+
+  .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Tambahkan warna latar belakang */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    transition: box-shadow 0.3s ease; /* Animasi saat hover */
 }
 
-.grid-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
+.scroll-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efek hover */
 }
 
-.grid-item {
-    text-align: center;
+.scroll-content {
+    display: inline-flex;
+    gap: 10px;
+    padding: 10px 0; /* Tambahkan padding untuk jarak vertikal */
 }
 
-.grid-image {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+.galeri-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
 }
 
-.pagination-controls {
-    margin-top: 20px;
+.galeri-image:hover {
+    transform: scale(1.05); /* Perbesar gambar saat hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan lebih besar */
 }
 
-/* Default button style */
-.pagination-btn {
-    background: linear-gradient(135deg, #f1c40f 85%, #fff176 100%);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 10px;
+.scroll-container::-webkit-scrollbar {
+    height: 8px; /* Tinggi scrollbar */
+    background: #e0e0e0; /* Warna latar belakang scrollbar */
+    border-radius: 4px;
 }
 
-/* Hover effect */
-.pagination-btn:hover {
-    background: linear-gradient(135deg, #fff176 85%, #f1c40f 100%);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #888; /* Warna thumb scrollbar */
+    border-radius: 4px;
+    transition: background 0.3s ease; /* Animasi hover pada scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Warna thumb saat hover */
 }
 
 /* Kontak Section Styling */
