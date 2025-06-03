@@ -153,3 +153,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000); // Change image every 3 seconds
   });
 });
+
+const form = document.getElementById("kontakForm");
+const pesanSukses = document.getElementById("pesanSukses");
+
+form.addEventListener("submit", async function(event) {
+  event.preventDefault(); // Biar nggak reload halaman
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.reset(); // kosongkan form
+      pesanSukses.style.display = "block"; // tampilkan pesan sukses
+    } else {
+      alert("Terjadi kesalahan. Coba lagi ya.");
+    }
+  } catch (error) {
+    alert("Gagal mengirim. Coba lagi ya.");
+  }
+});
