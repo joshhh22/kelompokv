@@ -463,6 +463,8 @@ body.dark-mode .section { background: #323232; }
     max-width: 1100px;
     margin: 0 auto;
 }
+
+
 .materi-card {
     background: linear-gradient(135deg, #fffbe7 60%, #f1c40f1a 100%);
     border-radius: 18px;
@@ -494,6 +496,13 @@ body.dark-mode .section { background: #323232; }
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 12px 32px rgba(50,50,50,0.14);
 }
+
+.materi-card.active {
+  transform: scale(1.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
 .materi-card:hover h3,
 .materi-card:hover p {
     color: #222;
@@ -909,6 +918,255 @@ body.dark-mode h2{
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
+
+.rpl-section, .informatika-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rpl-container, .informatika-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rpl-card, .informatika-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  text-align: center;
+}
+
+.rpl-card h3, .informatika-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.rpl-card p, .informatika-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.tutorial-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tutorial-steps li {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-steps h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.tutorial-steps p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.tutorial-steps a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.tutorial-steps a:hover {
+  text-decoration: underline;
+}
+
+.tutorial-image {
+  max-width: 100%;
+  height: 270px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.seni-musik-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.musik-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.musik-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.musik-card:hover {
+  transform: scale(1.05);
+}
+
+.musik-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.musik-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.musik-card:hover .musik-overlay {
+  opacity: 1;
+}
+
+.musik-description {
+  margin-top: 30px;
+  text-align: left;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.musik-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.musik-description li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.musik-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.musik-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.musik-image {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.musik-card:hover .musik-image {
+  transform: scale(1.05);
+}
+
+.musik-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.musik-description {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+}
+
+.alat-musik-detail {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.rumah-matematika {
+  background-color: #f9f7f1;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 3rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.rumah-matematika h3 {
+  font-size: 1.8rem;
+  color: #1e3a3a;
+  margin-bottom: 1rem;
+}
+
+.rumah-math-card, .rumah-budaya-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 6px solid #f1c40f;
+  border-radius: 12px;
+}
+
+.rumah-math-card h4, .rumah-budaya-card h4 {
+  margin-bottom: 0.8rem;
+  color: #f1c40f;
+}
+
+.rumah-math-card pre {
+  background: #f0f0f0;
+  padding: 1rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.rumah-image-box {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.rumah-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 
 .lkpd-card:hover {
     background-color: #f1c40f9e;
