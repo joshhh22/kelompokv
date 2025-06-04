@@ -663,6 +663,16 @@ body.dark-mode .section { background: #323232; }
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   }
 
+  .history-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.history-link:hover .history-item {
+    box-shadow: 0 8px 32px rgba(241, 196, 15, 0.18);
+    transform: translateY(-6px) scale(1.02);
+}
+
   /* Responsive */
   @media(max-width: 900px) {
   .container-atas {
