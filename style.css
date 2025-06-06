@@ -45,12 +45,43 @@ body {
     margin: 0;
 }
 
-/* Fade-out animation */
 @keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.slider-background {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  animation: slideShow 15s infinite;
+}
+
+@keyframes slideShow {
+  0%   { background-image: url('main/pem.jpg'); }
+  33%  { background-image: url('main/kalsel.jpg'); }
+  66%  { background-image: url('main/kaltim.jpg'); }
+  100% { background-image: url('main/pem.jpg'); }
+}
+
+.slider-background  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  z-index: 2;
 }
 
 /* Hide scrollbar */
@@ -306,25 +337,18 @@ body {
     }
 }
 
-/* Video background */
-.video-section {
-    position: relative;
-    height: 100vh;
-}
-#bg-video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
+
 .overlay {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffffad;
+    color: #f1f1f1;
     text-align: center;
     font-size: 2rem;
+}
+
+.overlay h1 {
+    color: #f1f1f1;
 }
 
 /* Section styling */
