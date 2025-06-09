@@ -32,12 +32,16 @@
       <input type="checkbox" id="menu-toggle" style="display: none;">
       <label for="menu-toggle" class="menu-icon">☰</label>
       <ul class="menu">
-          <li><a href="#anggota">Anggota</a></li>
           <li><a href="#materi">Materi</a></li>
           <li><a href="#tentang">Tentang</a></li>
           <li><a href="#lkpd">LKPD</a></li>
+          <li><a href="#rpl">RPL</a></li>
+          <li><a href="#informatika">Informatika</a></li>
+          <li><a href="#mulok">Muatan Lokal</a></li>
+          <li><a href="#pelajaran-sejarah">Pelajaran Sejarah</a></li>
+          <li><a href="#seni-musik">Seni Musik</a></li>
+          <li><a href="#mtk">Matematika</main></a></li>
           <li><a href="#galeri">Galeri</a></li>
-          <li><a href="#kontak">Kontak</a></li>
       </ul>
   </nav>
 
@@ -67,34 +71,155 @@
     </div>
 </section>
 <section id="materi" class="section materi-section">
-    <h2 class="animate-element">Materi Pembelajaran</h2>
-    
-    <div class="materi-grid materi-grid-3-2 animate-element">
-        <div class="materi-card animate-element">
-            <h3 class="animate-element">Pengertian TMII</h3>
-            <p class="animate-element">Taman Mini Indonesia Indah (TMII) adalah taman wisata bertema budaya Indonesia di Jakarta Timur yang menampilkan keberagaman budaya Indonesia.</p>
-        </div>
-        <div class="materi-card animate-element">
-            <h3 class="animate-element">Sejarah TMII</h3>
-            <p class="animate-element">TMII dibangun pada tahun 1972 dan diresmikan pada tahun 1975 sebagai miniatur kekayaan budaya Nusantara.</p>
-        </div>
-        <div class="materi-card animate-element">
-            <h3 class="animate-element">Wahana & Fasilitas</h3>
-            <p class="animate-element">Berbagai wahana seperti anjungan daerah, museum, taman, dan teater IMAX Keong Mas tersedia di TMII.</p>
-        </div>
-        <div class="materi-card animate-element">
-            <h3 class="animate-element">Nilai Edukasi</h3>
-            <p class="animate-element">TMII menjadi sarana edukasi dan rekreasi yang memperkenalkan budaya, adat, dan teknologi Indonesia kepada masyarakat.</p>
-        </div>
-        <div class="materi-card animate-element">
-            <h3 class="animate-element">Refleksi</h3>
-            <p class="animate-element">Melalui kunjungan dan pembelajaran di TMII, kita dapat lebih memahami pentingnya pelestarian budaya dan keberagaman Indonesia.</p>
-        </div>
-        <div class="materi-card animate-element">
-            <h3 class="animate-element">Informasi</h3>
-            <p class="animate-element">TMII buka setiap hari dengan berbagai acara budaya dan fasilitas yang dapat dinikmati oleh semua kalangan pengunjung.</p>
-        </div>
+  <h2 class="materi-container">Materi Museum & Anjungan</h2>
+  <section>
+  <div class="materi-container">
+    <!-- Museum Pemadam -->
+    <div class="materi-item" onclick="openPopup('popup-museum')">
+      <img src="main/pem.jpg" alt="Museum Pemadam">
+      <h3>Museum Pemadam</h3>
+      <p>Mengenal sejarah dan perlengkapan pemadam kebakaran Indonesia.</p>
     </div>
+    <div class="materi-item" onclick="openPopup('popup-museum1')">
+      <img src="pemadam/IMG_20250522_102647_313.jpg" alt="Museum Pemadam">
+      <h3>Prasasti Brandweer Batavia</h3>
+      <p>Mengenal apa itu Prasasti Brandweer Batavia.</p>
+    </div>
+    <div class="materi-item" onclick="openPopup('popup-museum2')">
+      <img src="pemadam/IMG_20250522_101853_790.jpg" alt="Museum Pemadam">
+      <h3>Koleksi Alat Musik</h3>
+      <p>Alat musik yang terlihat di gambar merupakan jenis alat musik tiup kuningan (brass instruments) yang digunakan oleh drumband atau marching band yang sering dimiliki oleh kesatuan pemadam kebakaran pada masa kolonial dan awal kemerdekaan Indonesia. Beberapa karakteristik alat musik ini</p>
+    </div>
+  </div>
+  </section>
+  <section>
+    <div class="materi-container">
+    <!-- Anjungan Kalimantan Selatan -->
+    <div class="materi-item" onclick="openPopup('popup-kalsel')">
+      <img src="main/kalsel.jpg" alt="Anjungan Kalsel">
+      <h3>Anjungan Kalimantan Selatan</h3>
+      <p>Rumah Baajang dan kebudayaan Banjar yang kaya akan filosofi.</p>
+    </div>
+    <div class="materi-item" onclick="openPopup('popup-kalsel1')">
+      <img src="kalsel/IMG_6379.JPG" alt="Anjungan Kalsel">
+      <h3>Masyarakat Kalimantan Selatan</h3>
+      <p>Kegiatan Masyarakat Kalimantan Selatan</p>
+    </div>
+    <div class="materi-item" onclick="openPopup('popup-kalsel2')">
+      <img src="kalsel/IMG_6371.JPG" alt="Anjungan Kalsel">
+      <h3>Alat Musik Kalimantan Selatan</h3>
+      <p>Mengenal salah satu alat musik Kalimantan Selatan</p>
+    </div>
+    </div>
+    
+  </section>
+  <section>
+  <div class="materi-container">
+    <!-- Anjungan Kalimantan Timur -->
+    <div class="materi-item" onclick="openPopup('popup-kaltim')">
+      <img src="main/kaltim.jpg" alt="Anjungan Kaltim">
+      <h3>Anjungan Kalimantan Timur</h3>
+      <p>Mewakili kekayaan budaya Dayak.</p>
+    </div>
+    <div class="materi-item" onclick="openPopup('popup-kaltim1')">
+      <img src="kaltim/IMG_6395.JPG" alt="Anjungan Kaltim">
+      <h3>Titik Nol Nusantara</h3>
+      <p>Menjelaskan Titik Nol Nusantara</p>
+    </div>
+    <div class="materi-item" onclick="openPopup('popup-kaltim2')">
+      <img src="kaltim/IMG_6409.JPG" alt="Anjungan Kaltim">
+      <h3>Baju Adat (Hudoq)</h3>
+      <p>Menjelaskan baju adat Hudoq</p>
+    </div>
+  </div>
+  </section>
+  <!-- POPUPS -->
+  <div id="popup-museum" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-museum')">&times;</span>
+      <h2>Museum Pemadam TMII</h2>
+      <p>Museum Pemadam Kebakaran TMII, yang terletak di kawasan Taman Mini Indonesia Indah (TMII), Jakarta Timur, merupakan satu-satunya museum di Indonesia yang didedikasikan untuk sejarah dan perkembangan pemadam kebakaran. Diresmikan pada 1 Maret 2015, museum ini berada di dalam kompleks Pos Pemadam Kebakaran Sektor 9 TMII dan dikelola oleh Dinas Penanggulangan Kebakaran dan Penyelamatan Provinsi DKI Jakarta. Museum ini menyajikan informasi mengenai evolusi layanan pemadam kebakaran di Jakarta, mulai dari era kolonial Belanda hingga masa kini. Pada masa kolonial, layanan ini dikenal dengan nama "Brandweer," yang kemudian berubah menjadi "Barisan Pemadam Kebakaran" setelah kemerdekaan, dan kini dikenal sebagai Dinas Penanggulangan Kebakaran dan Penyelamatan Provinsi DKI Jakarta.
+        <br><br>
+        Pada awal berdirinya, museum ini bertujuan untuk mengedukasi masyarakat tentang pentingnya peran pemadam kebakaran dalam kehidupan sehari-hari. Koleksi yang paling menarik adalah mobil pemadam tua, helm-helm klasik, serta prasasti Brandweer Batavia 1929 yang menjadi saksi sejarah perkembangan pemadam kebakaran di Jakarta.
+        <br><br>
+        Museum ini tidak hanya menampilkan koleksi sejarah, tetapi juga berfungsi sebagai pusat edukasi. Pengunjung, terutama pelajar, dapat belajar tentang pentingnya pencegahan kebakaran dan peran vital petugas pemadam kebakaran dalam masyarakat. Di lantai dua museum, sering diadakan sosialisasi dan edukasi mengenai penanggulangan kebakaran untuk siswa-siswi dari berbagai sekolah.
+    </p></p>
+    </div>
+  </div>
+  <div id="popup-museum1" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-museum1')">&times;</span>
+      <h2>Museum Pemadam TMII</h2>
+      <p>Brandweer (pemadam kebakaran) di Batavia didirikan setelah terjadi kebakaran besar di Kramat Kwitang pada tahun 1873. Pemerintah kolonial kemudian mengeluarkan peraturan resmi pada tahun 1915 dengan nama "Reglement op de Brandweer in de Afdeeling stad Vorsteden van Batavia".
+
+        <br>Prasasti Tanda Peringatan Brandweer Batavia 1919-1929 diberikan oleh sekelompok orang Betawi sebagai tanda penghargaan dan terima kasih atas darma bakti para petugas pemadam. Tanda penghargaan tersebut diberikan dalam bentuk "Prasasti" pada tanggal 1 Maret 1929.
+        <br>
+        Prasasti ini diberikan bertepatan dengan peringatan 10 tahun Brandweer Batavia pada tahun 1929. Angka 1919-1929 yang tertera menandakan periode 10 tahun pelayanan yang diapresiasi oleh masyarakat Betawi.
+      </p>
+    </div>
+  </div>
+  <div id="popup-museum2" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-museum2')">&times;</span>
+      <h2>Museum Pemadam TMII</h2>
+      <p>Pada masa lalu, pemadam kebakaran bukan hanya berfungsi untuk memadamkan api, tetapi juga berperan sebagai bagian dari upacara, parade, dan kegiatan masyarakat.
+
+        Alat musik seperti ini digunakan dalam kegiatan seremonial untuk membangkitkan semangat dan memberikan hiburan kepada masyarakat saat patroli atau acara kenegaraan.
+        
+        Koleksi ini menunjukkan warisan budaya dan sejarah sosial pemadam kebakaran, khususnya di era Hindia Belanda dan awal Republik Indonesia. Koleksi alat musik ini adalah representasi dari aspek budaya dan sosial dalam sejarah pemadam kebakaran Indonesia, bukan hanya sisi teknis pemadaman api. Museum Pemadam Kebakaran TMII menampilkan alat ini untuk memperlihatkan betapa luasnya peran petugas damkar di masa lalu.</p>
+    </div>
+  </div>
+
+  
+  <div id="popup-kalsel" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-kalsel')">&times;</span>
+      <h2>Anjungan Kalimantan Selatan</h2>
+      <p>Anjungan Kalimantan Selatan menampilkan Rumah Bubungan Tinggi dengan atap runcing yang melambangkan hubungan manusia dengan Tuhan. Pilar-pilar rumah dihiasi ukiran motif bunga teratai, kangkung, dan burung enggang yang merepresentasikan kehidupan masyarakat Banjar. Tangga depan bernama janjang sambutan menunjukkan tradisi keramahan. Warna kuning, hijau, dan merah mencerminkan warna kerajaan masa lalu. Rumah ini merupakan kediaman bangsawan Kesultanan Banjar abad ke-16, dengan arsitektur perpaduan Jawa dan Melayu yang disesuaikan dengan iklim tropis Kalimantan. Ruangannya terdiri dari palimasan untuk keluarga inti dan paluaran untuk menerima tamu, mencerminkan hierarki sosial. Anjungan ini dibangun pada tahun 1975 sebagai bagian dari proyek pelestarian budaya nasional oleh Ibu Tien Soeharto, untuk menghormati warisan budaya Kalimantan Selatan.</p>
+    </div>
+  </div>
+  <div id="popup-kalsel1" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-kalsel1')">&times;</span>
+      <h2>Anjungan Kalimantan Selatan</h2>
+      <p>Patung ini menggambarkan kegiatan tradisional masyarakat Kalimantan Selatan yaitu mendulang emas di sungai. Proses ini dilakukan dengan menyaring pasir sungai menggunakan dulang untuk memperoleh butiran emas. Aktivitas ini mencerminkan kerja keras dan kearifan lokal masyarakat Banjar dan Dayak dalam memanfaatkan kekayaan alam secara turun-temurun. Patung ini menjadi simbol penting dari warisan budaya dan ekonomi masyarakat Kalimantan Selatan.</p>
+    </div>
+  </div>
+  <div id="popup-kalsel2" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-kalsel2')">&times;</span>
+      <h2>Anjungan Kalimantan Selatan</h2>
+      <p>
+        Gambar ini menampilkan alat musik tradisional dari Kalimantan Selatan, yaitu <b>gambus Banjar</b>.<br>
+        Gambus adalah alat musik petik yang sering dimainkan dalam kesenian dan acara adat masyarakat Banjar, seperti pernikahan, syukuran, atau pertunjukan seni religi.<br><br>
+        
+        Gambus memiliki bentuk mirip kecapi atau oud dari Timur Tengah, yang mencerminkan pengaruh budaya Arab dalam musik Melayu-Banjar.<br>
+        Biasanya dimainkan bersama alat musik tradisional lain seperti <b>gendang</b> dan <b>gong</b>, seperti yang terlihat juga dalam gambar.<br><br>
+        
+        Singkatnya, gambus adalah simbol perpaduan budaya dan bagian penting dalam musik tradisional masyarakat Kalimantan Selatan.
+        </p>    
+      </div>
+  </div>
+  
+  <div id="popup-kaltim" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-kaltim')">&times;</span>
+      <h2>Anjungan Kalimantan Timur</h2>
+      <p>Anjungan Kalimantan Timur. Di sana terdapat Rumah Lamin yang berdiri dengan panjang sekitar 300 meter, setara tiga kali panjang lapangan sepak bola.</p> <br> <p>Rumah Lamin ini bukan hanya tempat tinggal, melainkan simbol kebersamaan suku Dayak Kenyah.</p> <br> <p>Puluhan keluarga tinggal bersama dalam satu bangunan besar, mencerminkan nilai gotong royong dan kekuatan komunitas yang menjadi dasar kehidupan mereka.</p>    </div>
+  </div>
+  <div id="popup-kaltim1" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-kaltim1')">&times;</span>
+      <h2>Anjungan Kalimantan Timur</h2>
+      <p>Di Taman Mini Indonesia Indah (TMII), terdapat replika Titik Nol Ibu Kota Nusantara (IKN) yang menjadi simbol penting dalam proyek pembangunan IKN di Kalimantan Timur. Replika ini dihadirkan oleh Pemerintah Provinsi Kalimantan Timur sebagai bagian dari upaya untuk mempromosikan dan melestarikan budaya serta sejarah IKN kepada masyarakat luas.<br><br>Selain replika Titik Nol IKN, anjungan Kalimantan Timur di TMII juga menampilkan berbagai bangunan khas daerah, seperti lamin adat Dayak, Masjid Shiratal Mustaqim dari Samarinda Seberang, Rumah Dahor dari Balikpapan, dan Museum Tenggarong.<br><br>Replika Titik Nol IKN di TMII ini berfungsi sebagai sarana edukasi dan informasi bagi pengunjung yang ingin mengetahui lebih lanjut tentang IKN dan budaya Kalimantan Timur. Dengan adanya replika ini, diharapkan masyarakat dapat lebih memahami makna dan pentingnya IKN sebagai pusat pemerintahan masa depan Indonesia.</p>    </div>
+  </div>
+  <div id="popup-kaltim2" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-kaltim2')">&times;</span>
+      <h2>Anjungan Kalimantan Timur</h2>
+      <p>Baju adat Hudoq adalah pakaian tradisional yang digunakan dalam upacara adat Hudoq oleh suku Dayak di Kalimantan Timur. Upacara ini merupakan ritual penting yang bertujuan untuk memohon keselamatan dan kesuburan tanaman, sekaligus membersihkan desa dari pengaruh roh jahat.<br><br>Pakaian Hudoq terbuat dari bahan-bahan alami seperti anyaman daun, serat rotan, dan kulit kayu, yang kemudian dihiasi dengan bulu-bulu burung serta ornamen lain yang memperkuat kesan mistis. Salah satu ciri khas utama adalah topeng kayu yang menyeramkan, yang dipercaya mewakili roh leluhur atau makhluk halus pelindung desa.<br><br>Setiap warna dan motif pada baju adat Hudoq memiliki makna simbolis yang berbeda, mencerminkan kepercayaan dan nilai-nilai budaya masyarakat Dayak. Para penari yang mengenakan kostum ini akan menari secara ritual selama upacara berlangsung sebagai bentuk penghormatan kepada leluhur dan alam sekitar.<br><br>Baju adat Hudoq bukan hanya sekadar pakaian, tapi juga merupakan warisan budaya yang sangat penting untuk dilestarikan sebagai identitas dan simbol spiritual masyarakat Dayak Kalimantan Timur.</p>
+    </div>
+  </div>
 </section>
 <section id="tentang" class="section tentang-section">
     <h2 class="animate-element">Tentang Website</h2>
@@ -467,7 +592,7 @@ Selain dari observasi langsung di lapangan, kami juga memperkaya informasi melal
   
 </section>
 <!-- Section: Luas Ruangan Tengah Rumah Baajang -->
-<section class="rumah-matematika animate-element">
+<section id="mtk" class="rumah-matematika animate-element">
   <h3>Menghitung Luas Ruangan Tengah Rumah Baajang</h3>
   <p>
     Outing class tidak hanya memberikan pengalaman langsung mengenai budaya dan sejarah, tetapi juga membuka peluang untuk menerapkan konsep akademik—seperti matematika. 
